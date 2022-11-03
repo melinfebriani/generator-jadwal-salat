@@ -1,5 +1,6 @@
 {
     "name": "kelompok5/generator-jadwal-sholat",
+    "description": "ini adalah package untuk mengenerate jadwal sholat secara otomatis menggunakan api external",
     "autoload": {
         "psr-4": {
             "Kelompok5\\GeneratorJadwalSholat\\": "src/"
