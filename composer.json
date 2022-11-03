@@ -1,0 +1,15 @@
+{
+    "name": "kelompok5/generator-jadwal-sholat",
+    "autoload": {
+        "psr-4": {
+            "Kelompok5\\GeneratorJadwalSholat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kelompok 5",
+            "email": "kelompok5@gmail.com"
+        }
+    ],
+    "require": {}
+}
