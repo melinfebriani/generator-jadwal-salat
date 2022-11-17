@@ -15,7 +15,9 @@ class Lokasi implements DataModel{
         $this->res = array();
         $this->provinsi = array(
             'Aceh' => ["Banda Aceh","Langsa","Sabang"],
-            'Sumatera Utama' => ["Binjai","Gunungsitoli","Medan"] 
+            'Sumatera Utara' => ["Binjai","Gunungsitoli","Medan"], 
+            'Sumatera Barat' => ["Padang","Bukittinggi","Pariaman"],
+            'Riau' => ["Pekanbaru","Dumai","Bengkalis"]
         );
     }
 
