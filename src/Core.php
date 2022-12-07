@@ -3,24 +3,16 @@ namespace Kelompok5\GeneratorJadwalSholat;
 
 use Exception;
 
-
 class Core{
     private $baseurl;
-    private $by;
     private $lokasi;
     private $tanggal;
     private $jadwal;
-    
-    
-    function __construct ($by,$lokasi,$tanggal) {
+        
+    function __construct ($by, $lokasi, $tanggal) {
         $this->jadwal = array();
-
-        $this->lokasi = new Lokasi($by);
-        $this->lokasi->setRequest($lokasi);
-
-        $this->tanggal = new Tanggal();
-        $this->tanggal->setRequest($tanggal);
-
+        $this->lokasi = new LokasiCreator($by, $lokasi);
+        $this->tanggal = new TanggalCreator($tanggal);     
         $this->baseurl = "https://api.myquran.com/v1/sholat/jadwal/";
     }
 
@@ -28,14 +20,14 @@ class Core{
         // echo count($lokasi);
         // var_dump($lokasi);
         // die;
-        $arrLok = is_array($lokasi);
-        if(!$arrLok){
-            $this->callAPI($lokasi,$tanggal);
-        }else{
+        // $arrLok = is_array($lokasi);
+        // if(!$arrLok){
+        //     $this->callAPI($lokasi,$tanggal);
+        // }else{
             foreach($lokasi as $l){
                 $this->callAPI($l,$tanggal);
             }
-        }
+        //}
 
         return $this->jadwal;
     }
@@ -56,8 +48,8 @@ class Core{
     }
 
     public function getData(){
-        $process = $this->process($this->lokasi->getResponse(),$this->tanggal->getResponse());
+        $process = $this->process($this->lokasi->response(),$this->tanggal->response());
         // return count($process);
-        return count($process) > 1 ? $process : $process[0];
+        return $process;
     }
 }

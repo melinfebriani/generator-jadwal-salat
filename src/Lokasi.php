@@ -10,18 +10,50 @@ class Lokasi implements DataModel{
     private $url;
     private $provinsi;
 
-    public function __construct($by){
+    public function __construct($by, $lokasi){
         $this->by = $by;
+        $this->req = $lokasi;
         $this->res = array();
         $this->provinsi = array(
-            'Aceh' => ["Banda Aceh","Langsa","Sabang"],
-            'Sumatera Utama' => ["Binjai","Gunungsitoli","Medan"] 
+            'aceh' => ["Banda Aceh","Langsa","Sabang","Lhokseumawe","Subulussalam"],
+            'sumatera utara' => ["Binjai","Gunungsitoli","Medan","Padangsidimpuan","Pematangsiantar","Sibolga","Tanjungbalai","Tebing Tinggi"], 
+            'sumatera barat' => ["Padang","Bukittinggi","Pariaman","Padang Panjang","Payakumbuh","Sawahlunto","Solok"],
+            'sumatera selatan' => ["Lubuklinggau","Palembang","Prabumulih","Pagar Alam"],
+            'riau' => ["Pekanbaru","Dumai","Bengkalis"],
+            'jambi' => ["Jambi","Sungai Penuh"],
+            'bangka belitung' => ["Pangkalpinang"],
+            'gorontalo' => ["Gorontalo"],
+            'daerah istimewa yogyakarta' => ["Yogyakarta"],
+            'bali' => ["Denpasar"],
+            'banten' => ["Cilegon","Serang","Tangerang Selatan","Tangerang"],
+            'bengkulu' => ["Bengkulu"],
+            'jakarta' => ["Jakarta Barat","Jakarta Timur","Jakarta Selatan","Jakarta Pusat"],
+            'jawa timur' => ["Malang","Surabaya","Gresik","Batu","Blitar","Kediri","Madiun","Mojokerto","Pasuruan","Probolinggo"],
+            'jawa barat' => ["Bandung","Bogor","Tasikmalaya","Bekasi","Cimahi","Cirebon","Depok","Sukabumi","Banjar"],
+            'jawa tengah' => ["Solo","Semarang","Kudus","Magelang","Pekalongan","Salatiga","Surakarta","Tegal"],
+            'kalimantan barat' => ["Pontianak","Singkawang"],
+            'kalimantan selatan' => ["Banjarbaru","Banjarmasin"],
+            'kalimantan tengah' => ["Palangkaraya"],
+            'kalimantan uimur' => ["Balikpapan","Bontang","Samarinda","Nusantara","Tarakan"],
+            'kalimantan utara' => ["Tarakan"],
+            'kepulauan riau' => ["Batam","Tanjungpinang"],
+            'lampung' => ["Bandar Lampung","Metro"],
+            'maluku utara' => ["Tidore Kepulauan"],
+            'maluku' => ["Ambon","Tual"],
+            'nusa tenggara barat' => ["Bima","Mataram"],
+            'nusa tenggara timur' => ["Kupang"],
+            'papua barat' => ["Sorong"],
+            'papua' => ["Jayapura"],
+            'sulawesi selatan' => ["Makassar","Palopo","Parepare"],
+            'sulawesi tengah' => ["Palu"],
+            'sulawesi tenggara' => ["Kendari","Baubau"],
+            'sulawesi utara' => ["Blitung","Kotamobagu","Manado","Tomohon"] //update
         );
     }
 
-    public function setRequest($r){
-        $this->req = $r;
-    }
+    // private function setRequest($r){
+    //     $this->req = $r;
+    // }
 
     private function setResponse($r){
         array_push($this->res, $r);
@@ -52,7 +84,7 @@ class Lokasi implements DataModel{
         if(strtolower($this->by) == "kota"){
             $this->getByKota($this->req);
         }else{
-            $this->getByProv($this->req);
+            $this->getByProv(strtolower($this->req));
 
         }
         return $this->res;

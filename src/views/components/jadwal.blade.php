@@ -1,0 +1,1 @@
+<li class="list-group-item">{{$slot}} : {{$data->jadwal->$slot}}</li>

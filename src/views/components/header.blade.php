@@ -1,0 +1,1 @@
+<li class="list-group-item active" aria-current="true">{{$data->lokasi}}</li>

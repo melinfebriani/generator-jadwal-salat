@@ -12,5 +12,7 @@
             "email": "kelompok5@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "illuminate/contracts": "^9.42"
+    }
 }

@@ -7,9 +7,13 @@ class Tanggal implements DataModel{
     private $req;
     private $res;
 
-    public function setRequest($r){
-        $this->req = $r;
+    public function __construct($tanggal) {
+        $this->req = $tanggal;
     }
+
+    // private function setRequest($r){
+    //     $this->req = $r;
+    // }
 
     private function setResponse($r){
         $this->res = $r;
