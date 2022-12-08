@@ -10,10 +10,12 @@ Setelah membuat project Laravel baru, jalankan kode berikut :
 composer require kelompok5/generator-jadwal-sholat
 ```
 <br>
-<br>
 
 Lalu tambahkan pada app -> config -> providers
 \Kelompok5\GeneratorJadwalSholat\ContactServiceProvider::class
+
+Anda bisa mempublish config file dengan:
+php artisan vendor:publish --tag=public --force
 
 ## USAGE
 <br>
