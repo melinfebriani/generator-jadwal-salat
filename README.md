@@ -1,1 +1,2 @@
 # generator-jadwal-sholat
+**USAGE**
