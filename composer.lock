@@ -7,6 +7,13 @@
     "content-hash": "8245fc45fb9519363db1679b5f7ba37c",
     "packages": [
         {
+            "name": "illuminate/contracts",
+            "version": "v9.42.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/contracts.git",
+                "reference": "c7cc6e6198cac6dfdead111f9758de25413188b7"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/illuminate/contracts/zipball/c7cc6e6198cac6dfdead111f9758de25413188b7",
