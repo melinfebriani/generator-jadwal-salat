@@ -1,5 +1,5 @@
 # generator-jadwal-sholat
-Tata cara Instalasi dan alur pemakaian package JadwanSalat
+Tata cara Instalasi dan alur pemakaian package JadwalSalat
 <br>
 <br>
 **INSTAL**
@@ -14,5 +14,3 @@ Untuk menginstal package, Run :
 Setelah melakukan instal, maka akan terdirect ke JadwalSalat pada browser.
 <br>
 terdapat pada ```https://my-app.test/JadwalSalat```
-<br>
-<br>
