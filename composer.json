@@ -12,9 +12,6 @@
             "email": "kelompok5@gmail.com"
         }
     ],
-    "require": {
-        "illuminate/contracts": "^9.42.0"
-    },
     "extra": {
         "laravel": {
             "providers": [
