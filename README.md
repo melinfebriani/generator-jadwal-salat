@@ -11,6 +11,7 @@ composer require kelompok5/generator-jadwal-sholat
 ```
 <br>
 <br>
+
 ## USAGE
 <br>
 Setelah melakukan instal, maka akan terdirect ke JadwalSalat pada browser.
