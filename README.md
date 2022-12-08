@@ -1,4 +1,7 @@
 # generator-jadwal-sholat
+Tata cara Instalasi dan alur pemakaian package JadwanSalat
+<br>
+<br>
 **INSTAL**
 <br>
 Untuk menginstal package, Run :
