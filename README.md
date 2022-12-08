@@ -4,7 +4,7 @@
 <br>
 <br>
 
-Untuk menginstal package, Run :
+Untuk menginstal package, jalankan kode berikut :
 <br>
 ```
 composer require kelompok5/generator-jadwal-sholat
