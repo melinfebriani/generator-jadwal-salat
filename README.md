@@ -1,6 +1,6 @@
 # generator-jadwal-sholat
 
-## Tata cara Instalasi dan alur pemakaian package JadwalSalat
+## Tata cara Instalasi dan alur pemakaian package generator-jadwal-sholat
 <br>
 <br>
 
