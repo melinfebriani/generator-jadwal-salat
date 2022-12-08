@@ -13,6 +13,6 @@
         }
     ],
     "require": {
-        "illuminate/contracts": "^9.42"
+        "illuminate/contracts": "^9.42.0"
     }
 }
