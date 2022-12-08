@@ -14,7 +14,7 @@ composer require kelompok5/generator-jadwal-sholat
 Lalu tambahkan pada app -> config -> providers
 \Kelompok5\GeneratorJadwalSholat\ContactServiceProvider::class
 
-Anda bisa mempublish config file dengan:
+Anda bisa mempublish views file dengan:
 php artisan vendor:publish --tag=public --force
 
 ## USAGE
