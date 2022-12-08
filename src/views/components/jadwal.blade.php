@@ -1,1 +1,4 @@
-<li class="list-group-item">{{$slot}} : {{$data->jadwal->$slot}}</li>
+<tr>
+      <th scope="row">{{$slot}}</th>
+      <td>{{$data->jadwal->$slot}}</td>
+</tr>

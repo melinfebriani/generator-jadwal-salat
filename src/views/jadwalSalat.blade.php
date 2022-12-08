@@ -9,30 +9,38 @@
     <title>Jadwal Salat</title>
 </head>
 <body>
-    <form action="{{route('jadwalSalat')}}" method="post">
-        @csrf
-        <input type="text" name="by" placeholder="masukkan berdasarkan kota/provinsi" require>
-        <input type="text" name="lokasi" placeholder="masukkan lokasi" require>
-        <input type="text" name="tanggal" placeholder="masukkan tanggal dengan format dd-mm-yyyy" require>
-        <input type="submit" value="Tampilkan Jadwal">
+    <form action="{{route('jadwalSalat')}}" method="post" class="ms-5 me-5">
+    <div class="mb-3">
+        <label class="form-label">Berdasarkan Kota/Provinsi</label>
+        <input type="text" class="form-control" name="by" placeholder="Masukkan berdasarkan kota/provinsi" require>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Lokasi</label>
+        <input type="text" class="form-control" name="lokasi" placeholder="Masukkan lokasi" require>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Tanggal</label>
+        <input type="text" class="form-control" name="tanggal" placeholder="Masukkan tanggal dengan format dd-mm-yyyy" require>
+    </div>
+    <button type="submit" class="btn btn-primary">Tampilkan Jadwal</button>
     </form>
     <br>
-
-    <div class="card ms-2">
+    <div class="ms-5 me-5">
     @foreach($data as $data)
-    <ul class="list-group">
-        <x-header :data="$data"/>
-        <x-jadwal :data="$data">subuh</x-jadwal>
-        <x-jadwal :data="$data">dzuhur</x-jadwal>
-        <x-jadwal :data="$data">ashar</x-jadwal>
-        <x-jadwal :data="$data">maghrib</x-jadwal>
-        <x-jadwal :data="$data">isya</x-jadwal>
-    </ul>
-    @endforeach
-    </div>
-   
-    
+        <ul class="list-group">
+        <x-jadwalSalat::header :data="$data"/>
+            <table class="table">
+            <tbody>
+                <x-jadwalSalat::jadwal :data="$data">subuh</x-jadwal>
+                <x-jadwalSalat::jadwal :data="$data">dzuhur</x-jadwal>
+                <x-jadwalSalat::jadwal :data="$data">ashar</x-jadwal>
+                <x-jadwalSalat::jadwal :data="$data">maghrib</x-jadwal>
+                <x-jadwalSalat::jadwal :data="$data">isya</x-jadwal>
+            </tbody>
+            </table>
+        </ul>
+        @endforeach 
+    </div>     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
 </body>
 </html>
