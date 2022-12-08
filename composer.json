@@ -14,12 +14,5 @@
     ],
     "require": {
         "illuminate/contracts": "^9.42"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Kelompok5\\GeneratorJadwalSholat\\ContactServiceProvider"
-            ]
-        }
     }
 }
