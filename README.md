@@ -4,13 +4,16 @@
 <br>
 <br>
 
-Untuk menginstal package, jalankan kode berikut :
+Setelah membuat project Laravel baru, jalankan kode berikut :
 <br>
 ```
 composer require kelompok5/generator-jadwal-sholat
 ```
 <br>
 <br>
+
+Lalu tambahkan pada app -> config -> providers
+\Kelompok5\GeneratorJadwalSholat\ContactServiceProvider::class
 
 ## USAGE
 <br>
