@@ -27,9 +27,9 @@ php artisan vendor:publish --tag=public --force
 
 ## USAGE
 <br>
-Setelah melakukan instal, maka akan terdirect ke JadwalSalat pada browser.
+Setelah melakukan instal, maka akan terdirect ke {APP_URL}/jadwalSalat pada browser.
 <br>
-terdapat pada 
+Misalnya 
 ```
-https://my-app.test/JadwalSalat
+https://my-app.test/jadwalSalat
 ```
